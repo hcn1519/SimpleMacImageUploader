@@ -20,6 +20,7 @@ class SignInVC: NSViewController {
         self.view.layer?.backgroundColor = NSColor.white.cgColor
 
         configureButtonDesign()
+
     }
 
     @IBAction func btnTapped(_ sender: NSButton) {

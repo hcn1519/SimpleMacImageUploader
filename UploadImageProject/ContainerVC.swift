@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SwiftyDropbox
 
 class ContainerVC: NSViewController {
 
@@ -40,8 +41,13 @@ class ContainerVC: NSViewController {
 
     }
 
-    @objc func signInSuccess() {
-        changeContainerView(index: 1, classType: MainVC.self)
+    @objc func signInSuccess(notification: NSNotification) {
+
+        guard let userinfo = notification.userInfo as? [String: Any] else { return }
+
+        if let _ = userinfo["client"] as? DropboxClient {
+            changeContainerView(index: 1, classType: MainVC.self)
+        }
     }
 
     func changeContainerView<T: NSViewController>(index: Int, classType: T.Type) {
