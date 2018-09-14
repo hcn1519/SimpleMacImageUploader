@@ -20,18 +20,6 @@ class SignInVC: NSViewController {
         self.view.layer?.backgroundColor = NSColor.white.cgColor
 
         configureButtonDesign()
-        NotificationCenter.default.addObserver(self, selector: #selector(signInSuccess),
-                                               name: NSNotification.Name(rawValue: "SignInSuccess"), object: nil)
-    }
-
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
     }
 
     @IBAction func btnTapped(_ sender: NSButton) {
@@ -40,10 +28,6 @@ class SignInVC: NSViewController {
                                                       openURL: { (url: URL) -> Void in
                                                         NSWorkspace.shared.open(url)
         })
-    }
-
-    @objc func signInSuccess() {
-        performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "toMainVC"), sender: nil)
     }
 }
 
