@@ -20,6 +20,12 @@ class SignInVC: NSViewController {
         self.view.layer?.backgroundColor = NSColor.white.cgColor
 
         configureButtonDesign()
+        NotificationCenter.default.addObserver(self, selector: #selector(signInSuccess),
+                                               name: NSNotification.Name(rawValue: "SignInSuccess"), object: nil)
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     override var representedObject: Any? {
@@ -35,16 +41,18 @@ class SignInVC: NSViewController {
                                                         NSWorkspace.shared.open(url)
         })
     }
+
+    @objc func signInSuccess() {
+        performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "toMainVC"), sender: nil)
+    }
 }
 
 extension SignInVC {
     func configureButtonDesign() {
         signInButton.isBordered = false
         signInButton.wantsLayer = true
-        signInButton.layer?.backgroundColor = NSColor(calibratedRed: 0/255, green: 97/255, blue: 255/255, alpha: 1.0).cgColor
+        signInButton.layer?.backgroundColor = NSColor(calibratedRed: 220/255, green: 220/255, blue: 220/255, alpha: 1.0).cgColor
         signInButton.layer?.cornerRadius = 8.0
-
-        signInButton.setFontColor(title: "SignIn with Dropbox", color: NSColor.white, fontSize: 14)
     }
 }
 

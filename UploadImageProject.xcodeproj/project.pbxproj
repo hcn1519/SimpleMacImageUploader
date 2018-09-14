@@ -12,6 +12,9 @@
 		7E269513213B9A49004BBFA5 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E269512213B9A49004BBFA5 /* SignInVC.swift */; };
 		7E269515213B9A4C004BBFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E269514213B9A4C004BBFA5 /* Assets.xcassets */; };
 		7E269518213B9A4C004BBFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E269516213B9A4C004BBFA5 /* Main.storyboard */; };
+		7EA144B5214B76F400CAF3A3 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA144B4214B76F400CAF3A3 /* ContainerVC.swift */; };
+		7EA144B8214B7E2E00CAF3A3 /* NSView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA144B7214B7E2E00CAF3A3 /* NSView+extension.swift */; };
+		7EA144BA214B7EEA00CAF3A3 /* Array+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA144B9214B7EEA00CAF3A3 /* Array+extension.swift */; };
 		EA25636A7B9205624F7AA35F /* Pods_UploadImageProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF109104CC588E0062C572DD /* Pods_UploadImageProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		7E269517213B9A4C004BBFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E269519213B9A4C004BBFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E26951A213B9A4C004BBFA5 /* UploadImageProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UploadImageProject.entitlements; sourceTree = "<group>"; };
+		7EA144B4214B76F400CAF3A3 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		7EA144B7214B7E2E00CAF3A3 /* NSView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+extension.swift"; sourceTree = "<group>"; };
+		7EA144B9214B7EEA00CAF3A3 /* Array+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+extension.swift"; sourceTree = "<group>"; };
 		BF109104CC588E0062C572DD /* Pods_UploadImageProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UploadImageProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,7 +76,9 @@
 		7E26950F213B9A49004BBFA5 /* UploadImageProject */ = {
 			isa = PBXGroup;
 			children = (
+				7EA144B6214B7E1F00CAF3A3 /* extension */,
 				7E269510213B9A49004BBFA5 /* AppDelegate.swift */,
+				7EA144B4214B76F400CAF3A3 /* ContainerVC.swift */,
 				7E269512213B9A49004BBFA5 /* SignInVC.swift */,
 				7E08EFB72148D8F3003F4E94 /* MainVC.swift */,
 				7E269514213B9A4C004BBFA5 /* Assets.xcassets */,
@@ -79,6 +87,15 @@
 				7E26951A213B9A4C004BBFA5 /* UploadImageProject.entitlements */,
 			);
 			path = UploadImageProject;
+			sourceTree = "<group>";
+		};
+		7EA144B6214B7E1F00CAF3A3 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				7EA144B7214B7E2E00CAF3A3 /* NSView+extension.swift */,
+				7EA144B9214B7EEA00CAF3A3 /* Array+extension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		A4D19A35C469BDD155ED464A /* Pods */ = {
@@ -203,7 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA144B8214B7E2E00CAF3A3 /* NSView+extension.swift in Sources */,
+				7EA144B5214B76F400CAF3A3 /* ContainerVC.swift in Sources */,
 				7E269513213B9A49004BBFA5 /* SignInVC.swift in Sources */,
+				7EA144BA214B7EEA00CAF3A3 /* Array+extension.swift in Sources */,
 				7E08EFB82148D8F3003F4E94 /* MainVC.swift in Sources */,
 				7E269511213B9A49004BBFA5 /* AppDelegate.swift in Sources */,
 			);

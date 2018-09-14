@@ -11,4 +11,10 @@ import SwiftyDropbox
 
 class MainVC: NSViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.wantsLayer = true
+        self.view.layer?.backgroundColor = NSColor.white.cgColor
+    }
 }

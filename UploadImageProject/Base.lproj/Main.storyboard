@@ -701,59 +701,88 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Sign InVC-->
+        <!--ContainerVC-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="SignInVC" customModule="UploadImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ContainerVC" customModule="UploadImageProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hHI-Ge-Y4h" customClass="InsetButton" customModule="UploadImageProject" customModuleProvider="target">
-                                <rect key="frame" x="139" y="117" width="202" height="37"/>
-                                <buttonCell key="cell" type="square" title="Sign in with Dropbox" bezelStyle="shadowlessSquare" image="DropboxGlyph_White" imagePosition="leading" alignment="center" borderStyle="border" inset="2" id="qvH-UZ-dtK">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system" size="16"/>
-                                </buttonCell>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="btnTapped:" target="XfG-lQ-9wD" id="o8R-pB-vqe"/>
-                                </connections>
-                            </button>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="9zt-nh-Dze">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            </containerView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="hHI-Ge-Y4h" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="9Zr-QW-zsd"/>
-                            <constraint firstItem="hHI-Ge-Y4h" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="tAq-5R-iG5"/>
+                            <constraint firstAttribute="trailing" secondItem="9zt-nh-Dze" secondAttribute="trailing" id="Ent-GQ-jfE"/>
+                            <constraint firstItem="9zt-nh-Dze" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="gu4-ZV-jAV"/>
+                            <constraint firstAttribute="bottom" secondItem="9zt-nh-Dze" secondAttribute="bottom" id="xdv-mW-IXd"/>
+                            <constraint firstItem="9zt-nh-Dze" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="y2s-DJ-iNV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="signInButton" destination="hHI-Ge-Y4h" id="XR3-ee-HAX"/>
-                        <segue destination="Je2-nT-Nko" kind="show" identifier="toMainVC" id="9Fc-n2-Mtf"/>
+                        <outlet property="containerView" destination="9zt-nh-Dze" id="aaz-LW-5eQ"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
-        <!--MainVC-->
-        <scene sceneID="EBe-kJ-BVF">
+        <!--Sign InVC-->
+        <scene sceneID="juU-6D-2Xo">
             <objects>
-                <viewController id="Je2-nT-Nko" customClass="MainVC" customModule="UploadImageProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="c8O-u0-Mdm">
+                <viewController storyboardIdentifier="signInVC" id="Uql-Sb-7ps" customClass="SignInVC" customModule="UploadImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="4pi-mz-WE5">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WiL-1P-2Et" customClass="InsetButton" customModule="UploadImageProject" customModuleProvider="target">
+                                <rect key="frame" x="147" y="128" width="157" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WHK-Rr-AQ4"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="Sign in with Dropbox" bezelStyle="shadowlessSquare" image="DropboxGlyph_Blue" imagePosition="left" alignment="center" borderStyle="border" inset="2" id="283-jt-iT6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="12"/>
+                                </buttonCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnTapped:" target="Uql-Sb-7ps" id="fxS-qX-Rym"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="WiL-1P-2Et" firstAttribute="centerX" secondItem="4pi-mz-WE5" secondAttribute="centerX" id="2w4-Yj-s3b"/>
+                            <constraint firstItem="WiL-1P-2Et" firstAttribute="centerY" secondItem="4pi-mz-WE5" secondAttribute="centerY" id="n0k-Zb-gUr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="WiL-1P-2Et" id="aLz-jd-inL"/>
+                    </connections>
+                </viewController>
+                <customObject id="IOH-b9-xkY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="655"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="RtC-xP-VZg">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="HSy-U2-eEA" customClass="MainVC" customModule="UploadImageProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="2uv-eg-rBM">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
                 </viewController>
-                <customObject id="kZx-48-Gy0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Nn4-Qr-HK2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1137"/>
+            <point key="canvasLocation" x="671" y="1050"/>
         </scene>
     </scenes>
     <resources>
-        <image name="DropboxGlyph_White" width="36" height="31"/>
+        <image name="DropboxGlyph_Blue" width="24" height="20"/>
     </resources>
 </document>
